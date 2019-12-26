@@ -1,0 +1,24 @@
+{
+    "namespace": "OS::Compute::PCIPassthrough",
+    "display_name": "PCI Passthrough",
+    "description": "PCI Passthrough Configuration, GPU PCI Passthrough format: NGPU:N.",
+    "visibility": "public",
+    "protected": true,
+    "resource_type_associations": [
+	    {
+            "name": "OS::Glance::Image",
+            "prefix": "pci_passthrough_"
+        },
+        {
+            "name": "OS::Nova::Flavor",
+            "prefix": "pci_passthrough:"
+        }
+    ],
+    "properties": {
+        "alias": {
+            "title": "PCI Passthrough Alias",
+            "description": "PCI Passthrough Configuration, GPU PCI Passthrough format: NGPU:N.",
+            "type": "string",
+        }
+    }
+}
